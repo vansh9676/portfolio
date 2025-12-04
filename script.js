@@ -11,54 +11,43 @@ function toggleResume() {
 // Download Resume as Text File
 function downloadResume() {
     const resumeText = `
-YOUR NAME
-City, Country | (123) 456-7890 | your.email@example.com | linkedin.com/in/yourname
+Vansh
+Panipat, Harayana (India) | (+91)9671766584 | jaatvansh5556@gmail.com | linkedin.com/in/vansh-kharb
 
 ═══════════════════════════════════════════════════════════════
 
 PROFESSIONAL SUMMARY
-Results-driven professional with X years of experience in [Your Field]. Proven track record of delivering high-quality projects and collaborating with cross-functional teams. Passionate about innovation and continuous learning.
+Motivated Computer Science student and aspiring Web Developer with a strong foundation in frontend technologies. Passionate about building responsive, user-friendly websites. Eager to apply skills in HTML, CSS, JavaScript, and Node.js to solve real-world problems.
 
 ═══════════════════════════════════════════════════════════════
 
-EXPERIENCE
+EXPERIENCE / PROJECTS
 
-Senior Developer
-Company Name | Jan 2022 - Present
-• Led development of key projects resulting in 40% performance improvement
-• Mentored 5 junior developers and conducted code reviews
-• Collaborated with product team to define technical requirements
-
-Developer
-Previous Company | Jan 2020 - Dec 2021
-• Developed and maintained full-stack web applications
-• Implemented responsive design across multiple platforms
-• Resolved production issues and optimized database queries
+Web Developer (Personal Project)
+Personal Portfolio Website | July 2025 - Present (5 Months)
+• Designed and developed a fully responsive personal portfolio website from scratch.
+• Implemented interactive features using pure JavaScript, including dynamic forms and navigation.
+• Deployed and hosted the application on GitHub Pages, ensuring 99% uptime.
+• Continuously refined the UI/UX design over a 5-month period to improve accessibility and aesthetics.
 
 ═══════════════════════════════════════════════════════════════
 
 EDUCATION
-Bachelor of Science in Computer Science
-University Name | Graduated 2020
+Bachelor of Computer Applications (BCA) - 5th Semester
+Kurukshetra University (KUK) | 2023 - 2026 (Expected)
 
 ═══════════════════════════════════════════════════════════════
 
 SKILLS
 
 Technical:
-HTML, CSS, JavaScript, React, Node.js, MongoDB, PostgreSQL
+HTML5, CSS3, JavaScript (ES6+), Node.js, GitHub/Git
 
-Tools:
-Git, Docker, Figma, Adobe XD
+Soft Skills:
+Problem Solving, Creative Thinking, Time Management, Adaptability
 
 Languages:
-English (Fluent), Spanish (Intermediate)
-
-═══════════════════════════════════════════════════════════════
-
-CERTIFICATIONS
-• AWS Certified Cloud Practitioner
-• Google UX Design Certificate
+English, Hindi
 
 ═══════════════════════════════════════════════════════════════
     `;
@@ -66,52 +55,11 @@ CERTIFICATIONS
     const dataStr = "data:text/plain;charset=utf-8," + encodeURIComponent(resumeText);
     const downloadAnchorNode = document.createElement('a');
     downloadAnchorNode.setAttribute("href", dataStr);
-    downloadAnchorNode.setAttribute("download", "resume.txt");
+    downloadAnchorNode.setAttribute("download", "Vansh_Resume.txt");
     document.body.appendChild(downloadAnchorNode);
     downloadAnchorNode.click();
     downloadAnchorNode.remove();
 }
-
-// Contact Form Submission
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const subject = document.getElementById('subject').value.trim();
-    const messageText = document.getElementById('messageText').value.trim();
-    
-    const responseMessage = document.getElementById('responseMessage');
-    
-    // Validate form
-    if (!name || !email || !subject || !messageText) {
-        responseMessage.textContent = 'Please fill in all fields.';
-        responseMessage.className = 'message error';
-        responseMessage.style.display = 'block';
-        return;
-    }
-
-    // Display success message
-    responseMessage.textContent = `Thank you ${name}! Your message has been recorded. I'll get back to you at ${email} soon.`;
-    responseMessage.className = 'message success';
-    responseMessage.style.display = 'block';
-    
-    // Reset form
-    this.reset();
-    
-    // Hide message after 5 seconds
-    setTimeout(() => {
-        responseMessage.style.display = 'none';
-    }, 5000);
-
-    // Log the data (for development purposes)
-    console.log({
-        name: name,
-        email: email,
-        subject: subject,
-        message: messageText
-    });
-});
 
 // Smooth Scroll for Navigation Links
 document.querySelectorAll('nav a').forEach(anchor => {
