@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Vansh - Personal Portfolio</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>Vansh</h1>
+        <p>Web Developer | Designer | Creative Thinker</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <p>Welcome to my personal portfolio! I'm passionate about creating beautiful and functional digital experiences. With expertise in web development and design, I love turning ideas into reality.</p>
+                <p style="margin-top: 15px;">Feel free to explore my work and get in touch if you'd like to collaborate or just say hello!</p>
+            </div>
+        </section>
+
+        <section id="resume">
+            <h2>Resume</h2>
+            <div style="display: flex; gap: 20px; justify-content: center; margin-bottom: 30px;">
+                <button onclick="downloadResume()" class="btn-primary">
+                    📥 Download Resume (PDF)
+                </button>
+                <button onclick="toggleResume()" class="btn-secondary">
+                    👁 View Resume
+                </button>
+            </div>
+            <div id="resumeContent" class="resume-content" style="display: none;">
+                <div class="resume-header">
+                    <h3>Vansh</h3>
+                    <p>Panipat,Harayana(India) | (+91)9671766584 | jaatvansh5556@gmail.com | linkedin.com/in/vansh kharb</p>
+                </div>
+
+                <div class="resume-section">
+                    <h4>Professional Summary</h4>
+                    <p>Results-driven professional with X years of experience in [Web development]. Proven track record of delivering high-quality projects and collaborating with cross-functional teams. Passionate about innovation and continuous learning.</p>
+                </div>
+
+                <div class="resume-section">
+                    <h4>Experience</h4>
+                    <div class="resume-item">
+                        <h5>Junior  Developer</h5>
+                        <p class="company">Company Name | Jan 2022 - Present</p>
+                        <ul>
+                            <li>Led development of key projects resulting in 40% performance improvement</li>
+                            <li>Mentored 5 junior developers and conducted code reviews</li>
+                            <li>Collaborated with product team to define technical requirements</li>
+                        </ul>
+                    </div>
+                    <div class="resume-item">
+                        <h5>Developer</h5>
+                        <p class="company">Previous Company | Jan 2020 - Dec 2021</p>
+                        <ul>
+                            <li>Developed and maintained full-stack web applications</li>
+                            <li>Implemented responsive design across multiple platforms</li>
+                            <li>Resolved production issues and optimized database queries</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <h4>Education</h4>
+                    <div class="resume-item">
+                        <h5>Bachelor of Science in Computer Science</h5>
+                        <p class="company">University Name | Graduated 2020</p>
+                    </div>
+                </div>
+
+                <div class="resume-section">
+                    <h4>Skills</h4>
+                    <p><strong>Technical:</strong> HTML, CSS, JavaScript, React, Node.js, MongoDB, PostgreSQL<br><strong>Tools:</strong> Git, Docker, Figma, Adobe XD<br><strong>Languages:</strong> English (Fluent), Spanish (Intermediate)</p>
+                </div>
+
+                <div class="resume-section">
+                    <h4>Certifications</h4>
+                    <ul>
+                        <li>AWS Certified Cloud Practitioner</li>
+                        <li>Google UX Design Certificate</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill-card">
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript, React</p>
+                </div>
+                <div class="skill-card">
+                    <h3>UI/UX Design</h3>
+                    <p>Figma, Adobe XD, Prototyping</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Communication</h3>
+                    <p>Clear, collaborative, creative</p>
+                </div>
+                <div class="skill-card">
+                    <h3>Problem Solving</h3>
+                    <p>Analytical, strategic, solutions-focused</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <div class="contact-form">
+                <div class="message" id="responseMessage"></div>
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="messageText">Message</label>
+                        <textarea id="messageText" name="messageText" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+
+            <div class="social-links">
+                <a href="https://linkedin.com" title="LinkedIn">in</a>
+                <a href="https://twitter.com" title="Twitter">𝕏</a>
+                <a href="https://github.com" title="GitHub">⚙</a>
+                <a href="mailto:your.email@example.com" title="Email">✉</a>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
+
+    <script src="/script.js"></script>
+</body>
+</html>
