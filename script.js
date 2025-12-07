@@ -11,19 +11,12 @@ function toggleResume() {
 // Download Resume as Text File
 // Download Resume as PDF file
 function downloadResume() {
-    const link = document.createElement('a');
-    
-    // If you keep the current file name:
-    // link.href = 'Resume - Vansh.pdf';
-
-    // 👇 Better: rename your file in GitHub to "Vansh_Resume.pdf"
-    // and then use:
-    link.href = 'Vansh_Resume.pdf';
-
-    link.download = 'Vansh_Resume.pdf'; // name user will see
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+  const link = document.createElement('a');
+  link.href = '/Vansh_Resume.pdf';   // 👈 FULL ROOT PATH
+  link.download = 'Vansh_Resume.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
 
 // Smooth Scroll for Navigation Links
